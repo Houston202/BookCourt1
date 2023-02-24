@@ -5,4 +5,4 @@ from .models import Users
 @admin.register(Users)
 class BooksAdmin(ImportExportModelAdmin):
     list_display = ('company_name', 'mobile_phone', 'email', 'url',
-                    'adres', 'name_of_major', 'in_stock')
+                    'adres', 'name_of_major', 'password')

@@ -11,7 +11,7 @@ def registration(request):
         form = UsersForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect("database/katalog.html")
+            return redirect('katalog')
 
     else:
         # GET request, present an empty form

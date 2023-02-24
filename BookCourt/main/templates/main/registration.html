@@ -18,10 +18,21 @@
       <div class="logo">BookCourt.CRM</div>
     </header>
     <main>
-      <form method="POST" class="register-form-container">
-        <div class="form-fields">
-          {% csrf_token %}
-          {{ form.as_p }}
+      <form method="POST">
+        {% csrf_token %}
+        <div class="register-form-container">
+          <h1 class="form-title">
+            Регистрация
+          </h1>
+          <div class="form-fields">
+              {{form.company_name}}
+              {{form.mobile_phone}}
+              {{form.email}}
+              {{form.url}}
+              {{form.adres}}
+              {{form.name_of_major}}
+              {{form.password}}
+          </div>
           <div class="form-buttons">
               <button class="button" value="submit">ОК</button>
           </div>

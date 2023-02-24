@@ -3,15 +3,15 @@ from .models import Books
 from .resources import BooksResource
 from django.contrib import messages
 from tablib import Dataset
-from django.http import HttpResponse
-import pandas as pd
-from django.http import JsonResponse
-from django.conf import settings
 
 
 def home_page(request):
     database = Books.objects.all()
     return render(request, 'database/database_home.html', {'database': database})
+
+
+def katalog(request):
+    return render(request, 'database/katalog.html')
 
 
 def import_data_to_db(request):
