@@ -4,4 +4,5 @@ from . import views
 urlpatterns = [
     path('', views.katalog, name='katalog'),
     path('create', views.import_data_to_db, name='create'),
+    path('profile', views.profile, name='profile')
 ]

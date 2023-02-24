@@ -14,6 +14,10 @@ def katalog(request):
     return render(request, 'database/katalog.html')
 
 
+def profile(request):
+    return render(request, 'database/user-profile.html')
+
+
 def import_data_to_db(request):
     if request.method == 'POST':
         books_resource = BooksResource()
