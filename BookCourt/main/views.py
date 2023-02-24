@@ -11,13 +11,12 @@ def registration(request):
         form = UsersForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect("/")
+            return redirect("database/katalog.html")
 
     else:
         # GET request, present an empty form
         form = UsersForm()
-    return render(request, 'createpost.html', {"form": form})
-    return render(request, 'main/registration.html')
+    return render(request, 'main/registration.html', {"form": form})
 
 def about(request):
     return render(request, 'main/about.html')
