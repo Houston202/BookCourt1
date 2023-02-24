@@ -23,22 +23,23 @@
     <img src="{% static 'main/img/6902298.jpg' %}" alt="Логотип компании" class="company-logo">
   </div>
   <div class="information-container">
-    <h1 class="title">Название компании</h1> <!--надо брать из базы данных-->
+    {% for item in data %}
+    <h1 class="title">{{ item.company_name }}</h1> <!--надо брать из базы данных-->
     <div class="inf-fields">
       <div class="inf-field">
-        <p>Телефон:</p>
+        <p>Телефон: {{ item.mobile_phone }}</p>
       </div>
       <div class="inf-field">
-        <p>Email:</p>
+        <p>Email: {{ item.email }}</p>
       </div>
       <div class="inf-field">
-        <p>Ссылка на сайт:</p>
+        <p>Ссылка на сайт: {{ item.url }}</p>
       </div>
       <div class="inf-field">
-        <p>Адрес:</p>
+        <p>Адрес: {{ item.adres }}</p>
       </div>
       <div class="inf-field">
-        <p>Представитель:</p>
+        <p>Представитель: {{ item.name_of_major }}</p>
       </div>
     </div>
     <div class="buttons">
@@ -46,6 +47,7 @@
         <button class="escape"><a href="..\autorization\authorization.html" class="text">Выйти из аккаунта</a></button>
       </div>
     </div>
+  {% endfor %}
   </div>
 </body>
 </html>
