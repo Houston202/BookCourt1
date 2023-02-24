@@ -1,0 +1,22 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Новости на сайте{% endblock %}
+
+{% block content %}
+	<div class="features">
+		<h1>Тут типа книга должна быть</h1>
+
+		{% for el in database %}
+			<div class="alert alert-warning">
+				<h3>{{ el.title }}</h3>
+				<p>Автор: {{ el.author }}</p>
+				<p>Год: {{ el.date }}</p>
+				<h4>Описание:<br>{{ el.review }}</h4>
+			</div>
+
+
+		{% endfor %}
+
+
+	</div>
+{% endblock %}
