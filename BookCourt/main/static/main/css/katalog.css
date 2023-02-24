@@ -63,6 +63,8 @@ header {
   font-weight: 300;
 }
 
+.inputik {display: none}
+
 .file-uppend {
   background: #FEC56C;
   width: 380px;

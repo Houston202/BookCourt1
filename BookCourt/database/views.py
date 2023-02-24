@@ -4,6 +4,7 @@ from .resources import BooksResource
 from django.contrib import messages
 from tablib import Dataset
 from django.apps import apps
+from django.http import HttpResponse
 
 model = apps.get_model('main', 'Users')
 
@@ -38,12 +39,16 @@ def katalog(request):
                 data[8]
             )
             value.save()
-    return render(request, 'database/katalog.html')
+    return render(request, 'database/katalog.html', {'database': database})
 
 
 def profile(request):
     data = model.objects.all()
     return render(request, 'database/user-profile.html', {'data': data})
+
+
+def profile_change(request):
+    return render(request, 'database/profile_change.html')
 
 
 def import_data_to_db(request):
@@ -71,3 +76,9 @@ def import_data_to_db(request):
                 )
             value.save()
     return render(request, 'database/create.html')
+
+
+
+"""
+Над этим всем страдал Олег
+"""

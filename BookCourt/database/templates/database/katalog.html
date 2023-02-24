@@ -18,41 +18,26 @@
     </div>
   </header>
   <main>
-    {% for item in database %}
     <div class="book-container">
       <h1 class="form-title">Ваш каталог</h1>
       <div class="wrapper">
+        {% for item in database %}
         <div class="card">
-          <div class="card-title">
-            <p>{{ item.title }}<br>
-            </p>
-          </div>
+          <img class="image" src="{% static 'main/img/book.jpg' %}" alt="Обложка книги" class="card-img" width="195" height="255">
+            <div class="card-title">
+              <p>{{ item.title }}<br>
+              </p>
+            </div>
         </div>
-        <div class="card">
-          <div class="card-title">
-            <p>{{ item.title }}<br>
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-title">
-            <p>{{ item.title }}<br>
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-title">
-            <p>{{ item.title }}<br>
-            </p>
-          </div>
-        </div>
-    {% endfor %}
+        {% endfor %}
     </div>
-    <form method="post" enctype="multipart/form-data">
+    <form method="post"  enctype="multipart/form-data">
       <div class="file-uppend">
         {% csrf_token %}
         <label for="catalog"><div>Загрузить файл</div>
-          <input type="file" accept=".xlsx,.cvs" id="catalog" required name="file">
+          <div class="inputik">
+            <input type="file" accept=".xlsx,.cvs" id="catalog" onchange="form.submit()" required name="file"><br><br>
+          </div>
         </label>
       </div>
     </form>

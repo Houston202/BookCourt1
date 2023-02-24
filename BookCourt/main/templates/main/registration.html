@@ -15,7 +15,10 @@
 
   <body>
     <header>
-      <div class="logo">BookCourt.CRM</div>
+        <div>
+            <button class="back-button"><a href="{% url 'katalog' %}"><img src="{% static 'main/img/back-player-multimedia-svgrepo-com.svg' %}" alt="Назад" width="40" height="40"></a></button>
+        </div>
+        <div class="logo">BookCourt.CRM</div>
     </header>
     <main>
       <form method="POST">
