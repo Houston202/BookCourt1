@@ -47,10 +47,6 @@ def profile(request):
     return render(request, 'database/user-profile.html', {'data': data})
 
 
-def profile_change(request):
-    return render(request, 'database/profile_change.html')
-
-
 def import_data_to_db(request):
     if request.method == 'POST':
         books_resource = BooksResource()

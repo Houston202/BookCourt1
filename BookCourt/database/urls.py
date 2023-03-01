@@ -6,6 +6,5 @@ urlpatterns = [
     path('', views.katalog, name='katalog'),
     path('create', views.import_data_to_db, name='create'),
     path('profile', views.profile, name='profile'),
-    path('homepagea', views.home_page, name='homepagea'),
-    path('profile_change', views.profile_change, name='profile_change')
+    path('homepagea', views.home_page, name='homepagea')
 ]
