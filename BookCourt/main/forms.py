@@ -1,5 +1,5 @@
 from .models import Users
-from django.forms import ModelForm, TextInput, EmailInput, PasswordInput, URLInput, NumberInput
+from django.forms import ModelForm, TextInput, EmailInput, PasswordInput, URLInput
 
 class UsersForm(ModelForm):
     class Meta:
